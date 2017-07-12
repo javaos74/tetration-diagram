@@ -1,0 +1,2296 @@
+{
+  "id": "5937d5d3755f0278f4dba292",
+  "name": "MSLab - Reporting Services Application",
+  "app_scope_id": "59373cf6755f02568bdba26f",
+  "description": "Mulit-tiered Microsoft Reporting Services Application",
+  "author": "Frank Cicalese",
+  "primary": true,
+  "created_at": 1496831443,
+  "version": 12,
+  "absolute_policies": [
+
+  ],
+  "default_policies": [
+    {
+      "consumer_filter_id": "5959528c755f024cb6d32189",
+      "provider_filter_id": "59357c47755f02562edba0be",
+      "consumer_filter_name": "Reporting Database Tier",
+      "provider_filter_name": "Tetrationmicrosoft",
+      "l4_params": [
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49170,
+            65535
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 2
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            443,
+            443
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5640,
+            5640
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5660,
+            5660
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            43221,
+            43221
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            43228,
+            43228
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            56157,
+            56157
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d32189",
+      "provider_filter_id": "5959002f755f0241d4b6c530",
+      "consumer_filter_name": "Reporting Database Tier",
+      "provider_filter_name": "Domain Controllers",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49155,
+            49155
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49158,
+            49159
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959002f755f0241d4b6c530",
+      "provider_filter_id": "5959528c755f024cb6d3218d",
+      "consumer_filter_name": "Domain Controllers",
+      "provider_filter_name": "Reporting Clients",
+      "l4_params": [
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49120,
+            65535
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            1565,
+            1565
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            1576,
+            1576
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            1587,
+            1587
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            1894,
+            1894
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5985,
+            5985
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            7388,
+            7388
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15908,
+            15908
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15913,
+            15913
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15936,
+            15936
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            16618,
+            16618
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17212,
+            17212
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17215,
+            17217
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17220,
+            17220
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17222,
+            17224
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17426,
+            17426
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17692,
+            17692
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17798,
+            17799
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            18119,
+            18119
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            18257,
+            18257
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            18582,
+            18582
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            64734,
+            64734
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            64737,
+            64740
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            64743,
+            64745
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d3218c",
+      "provider_filter_id": "5959002f755f0241d4b6c530",
+      "consumer_filter_name": "Reporting Web/App Tier",
+      "provider_filter_name": "Domain Controllers",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49155,
+            49155
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49158,
+            49159
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d3218c",
+      "provider_filter_id": "59357c47755f02562edba0be",
+      "consumer_filter_name": "Reporting Web/App Tier",
+      "provider_filter_name": "Tetrationmicrosoft",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 2
+        },
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49170,
+            65535
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            443,
+            443
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5640,
+            5640
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5660,
+            5660
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            22611,
+            22611
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            22615,
+            22615
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            53104,
+            53104
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59357c47755f02562edba0be",
+      "provider_filter_id": "5959528c755f024cb6d3218d",
+      "consumer_filter_name": "Tetrationmicrosoft",
+      "provider_filter_name": "Reporting Clients",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49120,
+            65535
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            1048,
+            1048
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            1084,
+            1084
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5357,
+            5357
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5985,
+            5985
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            8621,
+            8621
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15826,
+            15826
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15828,
+            15828
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15836,
+            15836
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15860,
+            15861
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15866,
+            15866
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15879,
+            15881
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15893,
+            15893
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15896,
+            15896
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15898,
+            15899
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15902,
+            15903
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15905,
+            15905
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15912,
+            15913
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15920,
+            15922
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15925,
+            15925
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15930,
+            15930
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            15934,
+            15934
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17122,
+            17122
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17126,
+            17126
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17135,
+            17135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17143,
+            17143
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17145,
+            17146
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17152,
+            17155
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17157,
+            17157
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17184,
+            17185
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17188,
+            17189
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17192,
+            17193
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17211,
+            17211
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17216,
+            17216
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17223,
+            17223
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17225,
+            17225
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17228,
+            17228
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17241,
+            17241
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17246,
+            17246
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39881,
+            39881
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39886,
+            39886
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39888,
+            39888
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39902,
+            39903
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39933,
+            39934
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39937,
+            39937
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39940,
+            39940
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39949,
+            39949
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39952,
+            39952
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39957,
+            39957
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39959,
+            39959
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39966,
+            39966
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39970,
+            39970
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39975,
+            39975
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39983,
+            39983
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            46226,
+            46226
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59867,
+            59867
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59889,
+            59890
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59892,
+            59894
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59929,
+            59929
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59941,
+            59942
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59947,
+            59947
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59950,
+            59950
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59953,
+            59954
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59959,
+            59960
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59963,
+            59963
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59967,
+            59967
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59969,
+            59969
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59972,
+            59972
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            59975,
+            59975
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59357c47755f02562edba0be",
+      "provider_filter_id": "5959528c755f024cb6d3218c",
+      "consumer_filter_name": "Tetrationmicrosoft",
+      "provider_filter_name": "Reporting Web/App Tier",
+      "l4_params": [
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49296,
+            49296
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49316,
+            49316
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49730,
+            64260
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "59357c47755f02562edba0be",
+      "provider_filter_id": "5959528c755f024cb6d32189",
+      "consumer_filter_name": "Tetrationmicrosoft",
+      "provider_filter_name": "Reporting Database Tier",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            1433,
+            1433
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5985,
+            5985
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49154,
+            49154
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            58682,
+            58682
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            3389,
+            3389
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d32189",
+      "provider_filter_id": "5959528c755f024cb6d3218d",
+      "consumer_filter_name": "Reporting Database Tier",
+      "provider_filter_name": "Reporting Clients",
+      "l4_params": [
+        {
+          "port": [
+            39122,
+            39122
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39870,
+            39870
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39892,
+            39892
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39955,
+            39955
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39964,
+            39964
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39973,
+            39973
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49170,
+            65535
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d32189",
+      "provider_filter_id": "5959528c755f024cb6d3218c",
+      "consumer_filter_name": "Reporting Database Tier",
+      "provider_filter_name": "Reporting Web/App Tier",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            58379,
+            58382
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d3218c",
+      "provider_filter_id": "5959528c755f024cb6d32189",
+      "consumer_filter_name": "Reporting Web/App Tier",
+      "provider_filter_name": "Reporting Database Tier",
+      "l4_params": [
+        {
+          "port": [
+            137,
+            137
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            1433,
+            1433
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d3218d",
+      "provider_filter_id": "5959002f755f0241d4b6c530",
+      "consumer_filter_name": "Reporting Clients",
+      "provider_filter_name": "Domain Controllers",
+      "l4_params": [
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            123,
+            123
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            53,
+            53
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            88,
+            88
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            389,
+            389
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            464,
+            464
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49155,
+            49155
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49158,
+            49159
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d3218c",
+      "provider_filter_id": "5959528c755f024cb6d3218d",
+      "consumer_filter_name": "Reporting Web/App Tier",
+      "provider_filter_name": "Reporting Clients",
+      "l4_params": [
+        {
+          "port": [
+            17144,
+            17144
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17183,
+            17183
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17187,
+            17187
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17230,
+            17230
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39883,
+            39883
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39938,
+            39938
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39954,
+            39954
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d3218d",
+      "provider_filter_id": "5959528c755f024cb6d3218c",
+      "consumer_filter_name": "Reporting Clients",
+      "provider_filter_name": "Reporting Web/App Tier",
+      "l4_params": [
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959002f755f0241d4b6c530",
+      "provider_filter_id": "5959528c755f024cb6d3218c",
+      "consumer_filter_name": "Domain Controllers",
+      "provider_filter_name": "Reporting Web/App Tier",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49221,
+            49221
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49253,
+            49253
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49260,
+            49260
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49267,
+            49267
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49273,
+            49273
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49275,
+            49275
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49305,
+            49305
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49331,
+            49332
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49351,
+            49351
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49391,
+            49391
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49424,
+            49425
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49469,
+            49469
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49567,
+            49567
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49588,
+            49588
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49595,
+            49595
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49612,
+            49612
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49656,
+            49656
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            49730,
+            65535
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959002f755f0241d4b6c530",
+      "provider_filter_id": "5959528c755f024cb6d32189",
+      "consumer_filter_name": "Domain Controllers",
+      "provider_filter_name": "Reporting Database Tier",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            49120,
+            65100
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d3218d",
+      "provider_filter_id": "5959528c755f024cb6d3218d",
+      "consumer_filter_name": "Reporting Clients",
+      "provider_filter_name": "Reporting Clients",
+      "l4_params": [
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            139,
+            139
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5357,
+            5357
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17148,
+            17148
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17186,
+            17186
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            17190,
+            17190
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39958,
+            39958
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            39978,
+            39978
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49170,
+            65535
+          ],
+          "proto": 17
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d3218d",
+      "provider_filter_id": "5959528c755f024cb6d32189",
+      "consumer_filter_name": "Reporting Clients",
+      "provider_filter_name": "Reporting Database Tier",
+      "l4_params": [
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    },
+    {
+      "consumer_filter_id": "5959528c755f024cb6d3218d",
+      "provider_filter_id": "59357c47755f02562edba0be",
+      "consumer_filter_name": "Reporting Clients",
+      "provider_filter_name": "Tetrationmicrosoft",
+      "l4_params": [
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 1
+        },
+        {
+          "port": [
+            137,
+            138
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            1434,
+            1434
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            1900,
+            1900
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            3702,
+            3702
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            5355,
+            5355
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            49170,
+            65535
+          ],
+          "proto": 17
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 41
+        },
+        {
+          "port": [
+            80,
+            80
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            135,
+            135
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            443,
+            443
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            445,
+            445
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            2139,
+            2139
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            2674,
+            2674
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            2677,
+            2677
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            2739,
+            2739
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            4648,
+            4648
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5357,
+            5357
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5640,
+            5640
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            5660,
+            5660
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            22543,
+            22543
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            22551,
+            22551
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            22569,
+            22569
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            22574,
+            22574
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            26304,
+            26307
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            43168,
+            43168
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            43186,
+            43186
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            53067,
+            53067
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            53072,
+            53072
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            53107,
+            53107
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            56154,
+            56154
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            56711,
+            56711
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            56729,
+            56729
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            56814,
+            56814
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            56892,
+            56892
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            56911,
+            56911
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            56953,
+            56953
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            56966,
+            56966
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            57044,
+            57044
+          ],
+          "proto": 6
+        },
+        {
+          "port": [
+            0,
+            0
+          ],
+          "proto": 2
+        }
+      ],
+      "action": "ALLOW",
+      "priority": 100
+    }
+  ],
+  "catch_all_action": "DENY",
+  "clusters": [
+    {
+      "name": "Domain Controllers",
+      "description": "Domain Controllers providing shared services to all Microsoft applications in RTP Lab.",
+      "id": "5959002f755f0241d4b6c530",
+      "approved": true,
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.13",
+          "name": "7.0.0.13"
+        },
+        {
+          "ip": "7.0.0.11",
+          "name": "dc01"
+        },
+        {
+          "ip": "7.0.0.12",
+          "name": "dc02"
+        }
+      ],
+      "external": true,
+      "parent_application": {
+        "id": "5937d417755f022e21dba197",
+        "name": "MSLab - Domain Controllers"
+      }
+    },
+    {
+      "name": "Reporting Clients",
+      "description": "Endpoints accessing reporting solution",
+      "id": "5959528c755f024cb6d3218d",
+      "approved": true,
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.31",
+          "name": "7.0.0.31"
+        },
+        {
+          "ip": "7.0.0.32",
+          "name": "7.0.0.32"
+        },
+        {
+          "ip": "7.0.0.91",
+          "name": "7.0.0.91"
+        },
+        {
+          "ip": "7.0.0.92",
+          "name": "7.0.0.92"
+        }
+      ],
+      "external": false
+    },
+    {
+      "name": "Reporting Database Tier",
+      "description": "Database servers for reporting application",
+      "id": "5959528c755f024cb6d32189",
+      "approved": true,
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.21",
+          "name": "SQL01"
+        }
+      ],
+      "external": false
+    },
+    {
+      "name": "Reporting Web/App Tier",
+      "description": "Web/App servers for reporting application",
+      "id": "5959528c755f024cb6d3218c",
+      "approved": true,
+      "labels": [
+
+      ],
+      "nodes": [
+        {
+          "ip": "7.0.0.41",
+          "name": "web01"
+        },
+        {
+          "ip": "7.0.0.51",
+          "name": "web01"
+        },
+        {
+          "ip": "7.0.0.50",
+          "name": "Web02"
+        },
+        {
+          "ip": "7.0.0.52",
+          "name": "Web02"
+        },
+        {
+          "ip": "7.0.0.42",
+          "name": "Web02"
+        }
+      ],
+      "external": false
+    }
+  ],
+  "inventory_filters": [
+    {
+      "id": "59357c47755f02562edba0be",
+      "name": "Tetrationmicrosoft",
+      "query": {
+        "type": "eq",
+        "field": "vrf_id",
+        "value": 6
+      }
+    }
+  ],
+  "vrf": {
+    "id": 6,
+    "name": "Tetration:microsoft",
+    "tenant_id": 12,
+    "tenant_name": "Microsoft"
+  }
+}

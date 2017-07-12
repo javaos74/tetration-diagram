@@ -1,0 +1,61 @@
+strict digraph "MSLab - SharePoint Application" {
+	graph [rankdir=LR];
+	node [label="\N"];
+	"5964af78755f021e7eaf333c"	 [label="SharePoint Application Tier:
+SPApp01"];
+	"5964af78755f021e7eaf3337"	 [label="SharePoint Database Tier:
+SQL02"];
+	"5964af78755f021e7eaf333c" -> "5964af78755f021e7eaf3337";
+	"5964af78755f021e7eaf333a"	 [label="SharePoint Distributed Cache Tier:
+SPDC01"];
+	"5964af78755f021e7eaf333c" -> "5964af78755f021e7eaf333a";
+	"5964af78755f021e7eaf333d"	 [label="SharePoint Front-End Tier:
+SPFE01"];
+	"5964af78755f021e7eaf333c" -> "5964af78755f021e7eaf333d";
+	"5964af78755f021e7eaf333b"	 [label="SharePoint Search Tier:
+SPSearch01"];
+	"5964af78755f021e7eaf333c" -> "5964af78755f021e7eaf333b";
+	"59357c47755f02562edba0be"	 [color=lightblue,
+		label=Tetrationmicrosoft,
+		style=filled];
+	"5964af78755f021e7eaf333c" -> "59357c47755f02562edba0be";
+	"59373cd0755f0224d9dba2c9"	 [color=lightblue,
+		label="Tetrationmicrosoft:Domain Controllers",
+		style=filled];
+	"5964af78755f021e7eaf333c" -> "59373cd0755f0224d9dba2c9";
+	"5964af78755f021e7eaf3337" -> "5964af78755f021e7eaf333c";
+	"5964af78755f021e7eaf3337" -> "5964af78755f021e7eaf333a";
+	"5964af78755f021e7eaf3337" -> "5964af78755f021e7eaf333d";
+	"5964af78755f021e7eaf3337" -> "5964af78755f021e7eaf333b";
+	"5964af78755f021e7eaf3337" -> "59357c47755f02562edba0be";
+	"5964af78755f021e7eaf3337" -> "59373cd0755f0224d9dba2c9";
+	"5964af78755f021e7eaf333a" -> "5964af78755f021e7eaf3337";
+	"5964af78755f021e7eaf333a" -> "5964af78755f021e7eaf333d";
+	"5964af78755f021e7eaf333a" -> "59357c47755f02562edba0be";
+	"5964af78755f021e7eaf333a" -> "59373cd0755f0224d9dba2c9";
+	"5964af78755f021e7eaf333d" -> "5964af78755f021e7eaf333c";
+	"5964af78755f021e7eaf333d" -> "5964af78755f021e7eaf3337";
+	"5964af78755f021e7eaf333d" -> "5964af78755f021e7eaf333a";
+	"5964af78755f021e7eaf333d" -> "5964af78755f021e7eaf333b";
+	"5964af78755f021e7eaf333d" -> "59357c47755f02562edba0be";
+	"5964af78755f021e7eaf333d" -> "59373cd0755f0224d9dba2c9";
+	"5964af78755f021e7eaf333b" -> "5964af78755f021e7eaf333c";
+	"5964af78755f021e7eaf333b" -> "5964af78755f021e7eaf3337";
+	"5964af78755f021e7eaf333b" -> "5964af78755f021e7eaf333d";
+	"5964af78755f021e7eaf333b" -> "59357c47755f02562edba0be";
+	"5964af78755f021e7eaf333b" -> "59373cd0755f0224d9dba2c9";
+	"59357c47755f02562edba0be" -> "5964af78755f021e7eaf333c";
+	"59357c47755f02562edba0be" -> "5964af78755f021e7eaf3337";
+	"59357c47755f02562edba0be" -> "5964af78755f021e7eaf333a";
+	"59357c47755f02562edba0be" -> "5964af78755f021e7eaf333d";
+	"59357c47755f02562edba0be" -> "5964af78755f021e7eaf333b";
+	"59373cd0755f0224d9dba2c9" -> "5964af78755f021e7eaf333c";
+	"59373cd0755f0224d9dba2c9" -> "5964af78755f021e7eaf3337";
+	"59373cd0755f0224d9dba2c9" -> "5964af78755f021e7eaf333a";
+	"59373cd0755f0224d9dba2c9" -> "5964af78755f021e7eaf333d";
+	"59373cd0755f0224d9dba2c9" -> "5964af78755f021e7eaf333b";
+	"59373d37755f02568bdba273"	 [color=lightblue,
+		label="Tetrationmicrosoft:SharePoint",
+		style=filled];
+	"59373cd0755f0224d9dba2c9" -> "59373d37755f02568bdba273";
+}

@@ -1,0 +1,93 @@
+strict digraph "Siwapp Invoicing Application" {
+	graph [rankdir=LR];
+	node [label="\N"];
+	"5965106f755f026632910341"	 [label="siwapp-app1:
+siwapp-app1"];
+	"5965106f755f0266329103415924dbcd497d4f3fc79c546e"	 [color=lightgray,
+		label="siwapp-app1-->Default:Tetration:
+TCP=['443', '5640', '5660']",
+		shape=box,
+		style=filled];
+	"5965106f755f026632910341" -> "5965106f755f0266329103415924dbcd497d4f3fc79c546e";
+	"5965106f755f0266329103415965106f755f026632910344"	 [color=lightgray,
+		label="siwapp-app1-->siwapp-db1:
+TCP=['3306']",
+		shape=box,
+		style=filled];
+	"5965106f755f026632910341" -> "5965106f755f0266329103415965106f755f026632910344";
+	"5965106f755f026632910341591f60cc497d4f3a0936db1d"	 [color=lightgray,
+		label="siwapp-app1-->Default:
+UDP=['53', '123']",
+		shape=box,
+		style=filled];
+	"5965106f755f026632910341" -> "5965106f755f026632910341591f60cc497d4f3a0936db1d";
+	"5924dbcd497d4f3fc79c546e"	 [color=lightblue,
+		label="Default:Tetration",
+		style=filled];
+	"5965106f755f0266329103415924dbcd497d4f3fc79c546e" -> "5924dbcd497d4f3fc79c546e";
+	"5965106f755f026632910344"	 [label="siwapp-db1:
+siwapp-db1"];
+	"5965106f755f0266329103415965106f755f026632910344" -> "5965106f755f026632910344";
+	"591f60cc497d4f3a0936db1d"	 [color=lightblue,
+		label=Default,
+		style=filled];
+	"5965106f755f026632910341591f60cc497d4f3a0936db1d" -> "591f60cc497d4f3a0936db1d";
+	"5965106f755f0266329103445924dbcd497d4f3fc79c546e"	 [color=lightgray,
+		label="siwapp-db1-->Default:Tetration:
+TCP=['443', '5640', '5660']",
+		shape=box,
+		style=filled];
+	"5965106f755f026632910344" -> "5965106f755f0266329103445924dbcd497d4f3fc79c546e";
+	"5965106f755f026632910344591f60cc497d4f3a0936db1d"	 [color=lightgray,
+		label="siwapp-db1-->Default:
+UDP=['53', '123']",
+		shape=box,
+		style=filled];
+	"5965106f755f026632910344" -> "5965106f755f026632910344591f60cc497d4f3a0936db1d";
+	"5965106f755f0266329103445924dbcd497d4f3fc79c546e" -> "5924dbcd497d4f3fc79c546e";
+	"5965106f755f026632910344591f60cc497d4f3a0936db1d" -> "591f60cc497d4f3a0936db1d";
+	"5965106f755f026632910345"	 [label="siwapp-proxy1:
+siwapp-proxy1"];
+	"5965106f755f0266329103455924dbcd497d4f3fc79c546e"	 [color=lightgray,
+		label="siwapp-proxy1-->Default:Tetration:
+TCP=['443', '5640', '5660']",
+		shape=box,
+		style=filled];
+	"5965106f755f026632910345" -> "5965106f755f0266329103455924dbcd497d4f3fc79c546e";
+	"5965106f755f0266329103455965106f755f026632910341"	 [color=lightgray,
+		label="siwapp-proxy1-->siwapp-app1:
+TCP=['8080']",
+		shape=box,
+		style=filled];
+	"5965106f755f026632910345" -> "5965106f755f0266329103455965106f755f026632910341";
+	"5965106f755f026632910345591f60cc497d4f3a0936db1d"	 [color=lightgray,
+		label="siwapp-proxy1-->Default:
+UDP=['53', '123']",
+		shape=box,
+		style=filled];
+	"5965106f755f026632910345" -> "5965106f755f026632910345591f60cc497d4f3a0936db1d";
+	"5965106f755f0266329103455924dbcd497d4f3fc79c546e" -> "5924dbcd497d4f3fc79c546e";
+	"5965106f755f0266329103455965106f755f026632910341" -> "5965106f755f026632910341";
+	"5965106f755f026632910345591f60cc497d4f3a0936db1d" -> "591f60cc497d4f3a0936db1d";
+	"591f60cc497d4f3a0936db1d5965106f755f026632910344"	 [color=lightgray,
+		label="Default-->siwapp-db1:
+TCP=['22']",
+		shape=box,
+		style=filled];
+	"591f60cc497d4f3a0936db1d" -> "591f60cc497d4f3a0936db1d5965106f755f026632910344";
+	"591f60cc497d4f3a0936db1d5965106f755f026632910341"	 [color=lightgray,
+		label="Default-->siwapp-app1:
+TCP=['22']",
+		shape=box,
+		style=filled];
+	"591f60cc497d4f3a0936db1d" -> "591f60cc497d4f3a0936db1d5965106f755f026632910341";
+	"591f60cc497d4f3a0936db1d5965106f755f026632910345"	 [color=lightgray,
+		label="Default-->siwapp-proxy1:
+TCP=['22', '80']",
+		shape=box,
+		style=filled];
+	"591f60cc497d4f3a0936db1d" -> "591f60cc497d4f3a0936db1d5965106f755f026632910345";
+	"591f60cc497d4f3a0936db1d5965106f755f026632910344" -> "5965106f755f026632910344";
+	"591f60cc497d4f3a0936db1d5965106f755f026632910341" -> "5965106f755f026632910341";
+	"591f60cc497d4f3a0936db1d5965106f755f026632910345" -> "5965106f755f026632910345";
+}

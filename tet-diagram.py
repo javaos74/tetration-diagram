@@ -1,11 +1,12 @@
-import pygraphviz as pgv
+#import pygraphviz as pgv
+import pydot
 import json
 from tetpyclient import RestClient
 import requests.packages.urllib3
 import csv
 
-API_ENDPOINT="YOUR_TETURL"
-API_CREDS="YOUR_TET_API_CREDS.JSON"
+API_ENDPOINT="https://medusa-cpoc.cisco.com"
+API_CREDS="/Users/christophermchenry/Documents/Scripting/tetration-api/medusa_credentials.json"
 
 def selectTetrationApps(endpoint,credentials):
 
@@ -74,17 +75,24 @@ def main():
     for appID in appIDs:
         print appID
         appDetails = restclient.get('/openapi/v1/applications/%s/details'%appID).json()
-        graph = pgv.AGraph(directed=True, rankdir="LR", name=appDetails['name'])
+
+        with open('./SQL-DVA-v8-policies.json') as config_file:
+            appDetails = json.load(config_file)
+
+        #graph = pgv.AGraph(directed=True, rankdir="LR", name=appDetails['name'])
+        graph = pydot.Dot(graph_type='digraph',name=appDetails['name'])
         print('\nPreparing "%s"...'%appDetails['name'])
         for cluster in appDetails['clusters']:
             node_names = cluster['name'] + ':'
             for node in cluster['nodes']:
                 node_names = node_names + '\n' + node['name']
-            graph.add_node(cluster['id'],
-                                label=node_names)
+            #graph.add_node(cluster['id'],
+            #                    label=node_names)
+            graph.add_node(pydot.Node(cluster['id'],label=node_names))
         for invfilter in appDetails['inventory_filters']:
-            graph.add_node(invfilter['id'],
-                                label=invfilter['name'],style='filled', color='lightblue')
+            #graph.add_node(invfilter['id'],
+            #                    label=invfilter['name'],style='filled', color='lightblue')
+            graph.add_node(pydot.Node(invfilter['id'],label='"'+invfilter['name']+'"',style='filled', fillcolor='lightblue'))
         for policy in appDetails['default_policies']:
 
             if showPorts:
@@ -105,19 +113,25 @@ def main():
                 #Stringify policies
                 ports = '\n'.join("%s=%r" % (key,val) for (key,val) in policies.iteritems())
                 ports = policy['consumer_filter_name'] + '-->' + policy['provider_filter_name'] + ':\n' + ports
-                pol_node = graph.add_node(policy['consumer_filter_id']+policy['provider_filter_id'],
+                #pol_node = graph.add_node(policy['consumer_filter_id']+policy['provider_filter_id'],
+                #                    label=ports, shape='box',
+                #                    style='filled', color='lightgray')
+                pol_node = graph.add_node(pydot.Node(policy['consumer_filter_id']+policy['provider_filter_id'],
                                     label=ports, shape='box',
-                                    style='filled', color='lightgray')
-                graph.add_edge(policy['consumer_filter_id'],policy['consumer_filter_id']+policy['provider_filter_id'])
-                graph.add_edge(policy['consumer_filter_id']+policy['provider_filter_id'],policy['provider_filter_id'])
+                                    style='filled', color='lightgray'))
+                #graph.add_edge(policy['consumer_filter_id'],policy['consumer_filter_id']+policy['provider_filter_id'])
+                #graph.add_edge(policy['consumer_filter_id']+policy['provider_filter_id'],policy['provider_filter_id'])
+                graph.add_edge(pydot.Edge(policy['consumer_filter_id'],policy['consumer_filter_id']+policy['provider_filter_id']))
+                graph.add_edge(pydot.Edge(policy['consumer_filter_id']+policy['provider_filter_id'],policy['provider_filter_id']))
 
             else:
                 if policy['consumer_filter_id'] == '5959528c755f024cb6d32189' and policy['provider_filter_id'] == '5959528c755f024cb6d3218c':
                     print('I think this is right')
-                graph.add_edge(policy['consumer_filter_id'],policy['provider_filter_id'])
+                graph.add_edge(pydot.Edge(policy['consumer_filter_id'],policy['provider_filter_id']))
 
         f = open(appDetails['name']+'.dot','w')
-        f.write(graph.string())
+        #f.write(graph.string())
+        f.write(graph.to_string())
         #print(graph.string())
 
 if __name__ == '__main__':

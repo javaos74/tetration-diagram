@@ -76,8 +76,8 @@ def main():
         print appID
         appDetails = restclient.get('/openapi/v1/applications/%s/details'%appID).json()
 
-        with open('./SQL-DVA-v8-policies.json') as config_file:
-            appDetails = json.load(config_file)
+        #with open('./SQL-DVA-v8-policies.json') as config_file:
+        #    appDetails = json.load(config_file)
 
         #graph = pgv.AGraph(directed=True, rankdir="LR", name=appDetails['name'])
         graph = pydot.Dot(graph_type='digraph',name=appDetails['name'])
